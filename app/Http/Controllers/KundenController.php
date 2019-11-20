@@ -9,12 +9,12 @@ use Illuminate\Support\Facades\Validator;
 
 class KundenController extends Controller
 {
-    public function formular()
+    public function form()
     {
-        return view('infomaterial-bestellformular');
+        return view('form');
     }
 
-    public function datenSpeichern(Request $request)
+    public function create(Request $request)
     {
         $validatedRequest = Validator::make($request->all(), [
             'anrede'     => 'in:Frau,Herr,Familie',
@@ -28,18 +28,18 @@ class KundenController extends Controller
 
         $kunde = Kunde::create($validatedRequest);
 
-        return redirect()->route('daten-gespeichert', $kunde);
+        return redirect()->route('show', $kunde);
     }
 
-    public function datenGespeichert(Kunde $kunde)
+    public function show(Kunde $kunde)
     {
-        return view('daten-gespeichert', ['kunde' => $kunde]);
+        return view('show', ['kunde' => $kunde]);
     }
 
-    public function kunden()
+    public function list()
     {
         $kunden = Kunde::all();
 
-        return view('kunden', ['kunden' => $kunden]);
+        return view('list', ['kunden' => $kunden]);
     }
 }

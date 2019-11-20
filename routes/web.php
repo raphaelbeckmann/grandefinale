@@ -3,10 +3,10 @@
 use Illuminate\Support\Facades\Route;
 
 // MVC-Lösung
-Route::get('formular', 'KundenController@formular')->name('formular');
-Route::post('daten-speichern', 'KundenController@datenSpeichern')->name('daten-speichern');
-Route::get('daten-gespeichert/{kunde}', 'KundenController@datenGespeichert')->name('daten-gespeichert');
-Route::get('kunden', 'KundenController@kunden')->name('kunden');
+Route::get('form', 'KundenController@form')->name('form');
+Route::post('create', 'KundenController@create')->name('create');
+Route::get('show/{kunde}', 'KundenController@show')->name('show');
+Route::get('list', 'KundenController@list')->name('list');
 
 // Musterlösung
 Route::any('musterloesung', function() {
