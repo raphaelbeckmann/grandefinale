@@ -6,7 +6,6 @@ use App\Models\Kunde;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-
 class KundenController extends Controller
 {
     public function form()
