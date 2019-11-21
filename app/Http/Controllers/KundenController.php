@@ -8,6 +8,18 @@ use Illuminate\Support\Facades\Validator;
 
 class KundenController extends Controller
 {
+    public function list()
+    {
+        $kunden = Kunde::all();
+
+        return view('list', ['kunden' => $kunden]);
+    }
+
+    public function show(Kunde $kunde)
+    {
+        return view('show', ['kunde' => $kunde]);
+    }
+
     public function create()
     {
         return view('form');
@@ -28,17 +40,5 @@ class KundenController extends Controller
         $kunde = Kunde::create($validatedRequest);
 
         return redirect()->route('show', $kunde);
-    }
-
-    public function show(Kunde $kunde)
-    {
-        return view('show', ['kunde' => $kunde]);
-    }
-
-    public function list()
-    {
-        $kunden = Kunde::all();
-
-        return view('list', ['kunden' => $kunden]);
     }
 }
