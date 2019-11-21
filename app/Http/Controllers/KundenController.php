@@ -8,12 +8,12 @@ use Illuminate\Support\Facades\Validator;
 
 class KundenController extends Controller
 {
-    public function form()
+    public function create()
     {
         return view('form');
     }
 
-    public function create(Request $request)
+    public function store(Request $request)
     {
         $validatedRequest = Validator::make($request->all(), [
             'anrede'     => 'in:Frau,Herr,Familie',

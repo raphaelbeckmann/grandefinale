@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Validator;
 
 class KundenApiController extends Controller
 {
-    public function create(Request $request)
+    public function store(Request $request)
     {
         $validatedRequest = Validator::make($request->all(), [
             'anrede'     => 'in:Frau,Herr,Familie',

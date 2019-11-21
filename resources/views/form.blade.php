@@ -30,7 +30,7 @@
 
     <p>Bitte senden Sie mir Informationsmaterial!</p>
 
-    <form method="post" action="{{ route('create') }}">
+    <form method="post" action="{{ route('store') }}">
         {{ csrf_field() }}
 
         <p>
