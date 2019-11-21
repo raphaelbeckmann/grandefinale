@@ -22,7 +22,7 @@ class KundenController extends Controller
 
     public function create()
     {
-        return view('form');
+        return view('create');
     }
 
     public function store(Request $request)
