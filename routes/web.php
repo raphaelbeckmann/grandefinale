@@ -16,6 +16,6 @@ Route::get('list', 'KundenController@list')->name('list');
 
 
 // MVC-API-Lösung
-Route::post('store', 'KundenApiController@store')->name('store');
-Route::get('show/{kunde}', 'KundenApiController@show')->name('show');
-Route::get('list', 'KundenApiController@list')->name('list');
+Route::post('store', 'KundenApiController@store')->name('api.store');
+Route::get('show/{kunde}', 'KundenApiController@show')->name('api.show');
+Route::get('list', 'KundenApiController@list')->name('api.list');
