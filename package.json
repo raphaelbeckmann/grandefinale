@@ -3,7 +3,16 @@
     "version": "1.0.0",
     "license": "MIT",
     "private": true,
+    "scripts": {
+        "dev": "parcel watch resources/js/app.js --out-dir public/build",
+        "build": "parcel build resources/js/app.js --out-dir public/build --no-source-maps"
+    },
     "devDependencies": {
         "parcel-bundler": "^1.12.4"
+    },
+    "dependencies": {
+        "babel-polyfill": "^6.26.0",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0"
     }
 }
