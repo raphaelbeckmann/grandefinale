@@ -30,43 +30,58 @@ export default function Show() {
   }
 
   return (
-    <>
-      <h1>Vielen Dank für Ihre Daten!</h1>
+    <div className="card col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+      <div className="card-body">
+        <h1>Übersicht</h1>
 
-      <p>An dieser Adresse werden wir Sie zukünftig mit Werbung belästigen:</p>
+        <div className="alert alert-success" role="alert">
+          <h4 className="alert-heading">Vielen Dank für Ihre Daten!</h4>
+          An dieser Adresse werden wir Sie zukünftig mit Werbung belästigen.
+        </div>
 
-      <table>
-        <tbody>
-          <tr>
-            <td>Anrede</td>
-            <td>{kunde.anrede}</td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>{kunde.name}</td>
-          </tr>
-          <tr>
-            <td>Strasse</td>
-            <td>{kunde.strasse}</td>
-          </tr>
-          <tr>
-            <td>PLZ</td>
-            <td>{kunde.plz}</td>
-          </tr>
-          <tr>
-            <td>Ort</td>
-            <td>{kunde.ort}</td>
-          </tr>
-          <tr>
-            <td>Jahreszeit</td>
-            <td>{kunde.jahreszeit}</td>
-          </tr>
-          <tr>
-            <td>Wünsche</td>
-            <td>{kunde.wuensche}</td>
-          </tr>
-        </tbody>
-      </table>
-    </>
+        <div className="row">
+          <label className="col-sm-3 col-form-label">Anrede:</label>
+          <div className="col-sm-9">
+            <p class="form-control-plaintext"><b>{kunde.anrede}</b></p>
+          </div>
+        </div>
+        <div className="row">
+          <label className="col-sm-3 col-form-label">Name:</label>
+          <div className="col-sm-9">
+            <p class="form-control-plaintext"><b>{kunde.name}</b></p>
+          </div>
+        </div>
+        <div className="row">
+          <label className="col-sm-3 col-form-label">Strasse:</label>
+          <div className="col-sm-9">
+            <p class="form-control-plaintext"><b>{kunde.strasse}</b></p>
+          </div>
+        </div>
+        <div className="row">
+          <label className="col-sm-3 col-form-label">PLZ:</label>
+          <div className="col-sm-9">
+            <p class="form-control-plaintext"><b>{kunde.plz}</b></p>
+          </div>
+        </div>
+        <div className="row">
+          <label className="col-sm-3 col-form-label">Ort:</label>
+          <div className="col-sm-9">
+            <p class="form-control-plaintext"><b>{kunde.ort}</b></p>
+          </div>
+        </div>
+        <div className="row">
+          <label className="col-sm-3 col-form-label">Jahreszeit:</label>
+          <div className="col-sm-9">
+            <p class="form-control-plaintext"><b>{kunde.jahreszeit}</b></p>
+          </div>
+        </div>
+        <div className="row">
+          <label className="col-sm-3 col-form-label">Wünsche:</label>
+          <div className="col-sm-9">
+            <p class="form-control-plaintext"><b>{kunde.wuensche}</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

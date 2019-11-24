@@ -2,27 +2,10 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <title>React Frontend</title>
 
-    <style>
-        body {
-            font-family: sans-serif;
-        }
-
-        label {
-            min-width: 75px;
-            display: inline-block;
-        }
-
-        input.error {
-            border: 2px solid red;
-        }
-
-        table, tr, td, th {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="{{ asset('build/app.css') }}">
 </head>
 <body>
 

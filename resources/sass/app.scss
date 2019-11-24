@@ -1,1 +1,13 @@
-//
+$body-bg: #fafafa;
+
+@import "~bootstrap/scss/bootstrap";
+
+
+html,
+body {
+	min-height: 100vh;
+}
+
+body {
+	background-color: #fafafa;
+}
