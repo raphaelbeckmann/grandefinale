@@ -16,6 +16,7 @@ Route::get('list', 'KundenController@list')->name('list');
 
 
 // MVC-API-Lösung
-Route::post('store', 'KundenApiController@store')->name('api.store');
-Route::get('show/{kunde}', 'KundenApiController@show')->name('api.show');
-Route::get('list', 'KundenApiController@list')->name('api.list');
+Route::get('react/{view?}', 'KundenFrontendController@index')->where('view', '(.*)')->name('react');
+Route::post('api/store', 'KundenApiController@store')->name('api.store');
+Route::get('api/show/{kunde}', 'KundenApiController@show')->name('api.show');
+Route::get('api/list', 'KundenApiController@list')->name('api.list');
