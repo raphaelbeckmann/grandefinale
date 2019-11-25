@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <title>Formular</title>
+    <title>Kundenliste - Grande Finale in Laravel</title>
 
     <style>
         body {

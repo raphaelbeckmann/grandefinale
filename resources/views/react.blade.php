@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <title>React Frontend</title>
+    <title>Grande Finale in React</title>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('build/app.css') }}">
 </head>
